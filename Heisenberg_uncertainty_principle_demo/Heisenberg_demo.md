@@ -3,7 +3,7 @@
 ## General Heisenberg uncertainty principle
 
 Let us consider two observables, A and B. Let $\langle A \rangle$ be the expectation value of A in a given normalized state $|\psi\rangle$. We define the uncertainty of A as:
-$$ \Delta A=\langle (A - \langle A \rangle )^2 \rangle ^{1/2}= \langle \langle A^2 \rangle - \langle A \rangle^2 \rangle ^{1/2}.$$
+$$ \Delta A=\langle (A - \langle A \rangle )^2 \rangle ^{1/2}= ( \langle A^2 \rangle - \langle A \rangle^2 ) ^{1/2}.$$
 Similarly, we can define the expectation value of B and its uncertainty. It can be shown that
 $$\Delta A \Delta B \geq \frac{1}{2} |\langle [A,B] \rangle|. $$
 This is the general Heisenberg uncertainty relation, where $[A,B]=AB-BA$ is the commutator of A and B.  
