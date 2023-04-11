@@ -10,7 +10,7 @@ This is the general Heisenberg uncertainty relation, where $[A,B]=AB-BA$ is the 
 
 ## Uncertainty relation for $\sigma_X$ and $\sigma_Y $
 
-Three quantum logic gates X,Y,Z correspond to three  Pauli matrices $\sigma_X$,$\sigma_Y$,$\sigma_Z$ respectively, where $X=\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}$,$Y=\begin{pmatrix} 0 & -i \\ i & 0\end{pmatrix}$,$Z=\begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix}$. Since $[\sigma_X,\sigma_Y]=2i\sigma_Z$, according to the uncertainty principle, there should be $\Delta X \Delta Y \geq \ |\langle Z \rangle |. $  
+Three quantum logic gates X,Y,Z correspond to three  Pauli matrices $\sigma_X$, $\sigma_Y$, $\sigma_Z$ respectively, where $X= \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}$,$Y=\begin{pmatrix} 0 & -i \\ i & 0\end{pmatrix}$,Z= $\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$. Since $[ \sigma _X , \sigma_Y ]=2i\sigma_Z$, according to the uncertainty principle, there should be $\Delta X \Delta Y \geq \ |\langle Z \rangle |. $  
 More specifically, if the quantum state is set as $|\psi\rangle=cos \frac{\theta}{2}|0\rangle + e^{i\phi}sin\frac{\theta}{2}|1\rangle $, then it can be calculated that $$\langle\psi|X|\psi\rangle=sin\theta cos\phi,\langle\psi|Y|\psi\rangle=sin\theta sin\phi,\langle\psi|Z|\psi\rangle=cos\theta,\langle\psi|X^2|\psi\rangle=\langle\psi|Y^2|\psi\rangle=1, \\ [\Delta(X)\Delta(Y)]^2-|\langle Z \rangle|^2=(1-{sin}^2 \theta {cos}^2 \phi)(1-{sin}^2\theta {sin}^2\phi)-{cos}^2\theta={cos}^2\phi {sin}^2\phi {sin}^4\theta \geq 0.$$
 The above formula is the equivalent expression of the uncertainty principle of X and Y operators, and we will  demonstrate it by pyquafu below.
 
@@ -32,7 +32,7 @@ def create_state(theta ,phi = pi/4 ):
     return qc
 ```
 
-Then we define the main function for demonstration. It has two parameters, `theta_num` is used to determine the number of theta values, `experimental` is used to select the operation on real machine or simulator. The function will take `theta_num` theta values uniformly in the interval $[0,\pi)$ for measurement, and place the measured expected $E(X)$,$E(Y)$ and $E(Z)$ in `obsexp`.  
+Then we define the main function for demonstration. It has two parameters, `theta_num` is used to determine the number of theta values, `experimental` is used to select the operation on real machine or simulator. The function will take `theta_num` theta values uniformly in the interval $[0,\pi)$ for measurement, and place the measured expected $E(X)$, $E(Y)$ and $E(Z)$ in `obsexp`.  
 The function has three return parameters, `theta`, `obsexp`, `experimental`, which respectively represent the taken theta value, corresponding three expectations and whether it is running on real machine or simulator. Besides, if running on a real machine, the function will show the history of the task, and you can save it for later viewing.
 
 ```python
